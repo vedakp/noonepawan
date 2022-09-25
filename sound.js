@@ -16,6 +16,7 @@ function beep(frequency,durationSec,ramp=false){
 }
 
 function playSound(){
+    console.log("playsound");
     beep (250, 0.5);
     beep (1000, 0.2);
     beep (550, 0.5);
