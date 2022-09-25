@@ -3,9 +3,10 @@ var stopTime = audioContext.currentTime;
 var oscillatorNode = audioContext.createOscillator();
 oscillatorNode.type = "sine";
 oscillatorNode.connect(audioContext.destination);
-oscillatorNode.start (); //Play beep!!!!!
+
 
 function beep(frequency,durationSec,ramp=false){
+    oscillatorNode.start (); //Play beep!!!!!
     if (ramp) {
         oscillatorNode.frequency.linearRampToValueAtTime (frequency, stopTime); // value in hertz
     } else {
