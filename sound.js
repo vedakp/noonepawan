@@ -15,10 +15,12 @@ function beep(frequency,durationSec,ramp=false){
     oscillatorNode.stop (stopTime);
 }
 
+function playSound(){
+    beep (250, 0.5);
+    beep (1000, 0.2);
+    beep (550, 0.5);
+    beep (50, 2, true);
+    beep (5000, 2, true);
+    beep (50, 0, true);
+}
 
-beep (250, 0.5);
-beep (1000, 0.2);
-beep (550, 0.5);
-beep (50, 2, true);
-beep (5000, 2, true);
-beep (50, 0, true);
