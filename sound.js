@@ -1,11 +1,11 @@
-var audioContext = new (window.AudioContext || window.webkitAudioContext)();
-var stopTime = audioContext.currentTime;
-var oscillatorNode = audioContext.createOscillator();
-oscillatorNode.type = "sine";
-oscillatorNode.connect(audioContext.destination);
 
 
 function beep(frequency,durationSec,ramp=false){
+    var audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    var stopTime = audioContext.currentTime;
+    var oscillatorNode = audioContext.createOscillator();
+    oscillatorNode.type = "sine";
+    oscillatorNode.connect(audioContext.destination);
     oscillatorNode.start (); //Play beep!!!!!
     if (ramp) {
         oscillatorNode.frequency.linearRampToValueAtTime (frequency, stopTime); // value in hertz
