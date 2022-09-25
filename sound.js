@@ -24,3 +24,4 @@ function playSound(){
     beep (50, 0, true);
 }
 
+playSound();
