@@ -1,0 +1,134 @@
+body {
+    background-color: #2B3D50;
+}
+.header{
+    display:flex;
+}
+.profile-pic{
+    height: 50px;
+    margin: 15px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.porfile-name{
+    width: 200px;
+    margin: 30px 0px 0px 0px;
+    color: #ffff;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    font-family: "codec pro";
+}
+.filename{
+    color: #fff;
+    width: 200px;
+    /* font-size: 10px; */
+    height: 10px;
+    position: relative;
+    top: -30px;
+    left: 35%;
+    font-family: monospace;
+    font-size: 11px;
+}
+.filename input{
+    width: 100px;
+    background-color: #001524;
+    color: #fff;
+    border: none;
+}
+.mobile-height {
+    min-height: 80vh;
+    margin: 10%;
+    background-color: #fff;
+    border-radius: 20px;
+}
+.window{
+    margin-bottom: 20px;
+}
+#logger{
+    margin: 15px;
+}
+#notepad{
+    margin: 15px;
+}
+#head {
+    font-family: monospace;
+    color: #fff;
+    margin: auto;
+    padding: 35px;
+    font-size: 40px;
+    text-align: center;
+}
+#box{
+    background-color: #001524;
+    border: none;
+    color: #fff;
+}
+.run{
+    position: relative;
+    top: -15%;
+    right: -75%;
+    border-radius: 10px;
+    width: 60px;
+    height: 30px;
+}
+#bar {
+    text-align: center;
+    width: 80.5%;
+    height: 30px;
+    background-color: #001524;
+    margin: 0 auto;
+    font-family: monospace;
+    padding: auto;
+    float: none;
+    border-radius: 20px 20px 0px 0px;
+}
+#red {
+    background-color: #E94B35;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    margin: 0 auto;
+    left: -46%;
+    /* bottom: -20%; */
+    top: 15px;
+    position: relative;
+}
+#yellow {
+    background-color: #f0f000;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    margin: 0 auto;
+    left: -41%;
+    /* bottom: 40%; */
+    top: 5px;
+    position: relative;
+    display: block;
+}
+#green {
+    background-color: #1AAF5C;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    margin: 0 auto;
+    left: -36%;
+    /* bottom: 99%; */
+    top: -5px;
+    position: relative;
+    display: block;
+}
+#screen {
+    background-color: #001524;
+    width: 80%;
+    height: 30vh;
+    border-radius: 0px 0px 20px 20px;
+    margin: 0 auto;
+    padding: 1px;
+}
+.font {
+    color: #fff;
+    font-family: monospace;
+    font-size: 15px;
+    text-align: left;
+    position: static;
+}

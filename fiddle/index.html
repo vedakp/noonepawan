@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Live code editor!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.11.2/ace.min.js"></script> -->
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+
+<body onLoad="setBg();">
+    <!-- <div id="head"> HTML5 & CSS3 TERMINAL </div> -->
+    <div class="header">
+        <img class="profile-pic" src="https://raw.githubusercontent.com/vedakp/noonepawan/main/profile.png">
+        <h3 class="porfile-name">@noonepawan</h3>
+    </div>
+    <div class="window">
+
+        <div id="bar">
+            <div id="red">
+            </div>
+            <div id="yellow">
+            </div>
+            <div id="green">
+            </div>
+            <p class="filename"><input class="inFilename" type="text" value="Javascript"></p>
+        </div>
+        <div id="screen">
+            <p class="font" id="notepad">
+                <textarea id="box" rows="10" cols="30"></textarea>
+            </p>
+            <input class="run" type="button" id="submit" value="Run">
+        </div>
+    </div>
+    <div class="window">
+
+        <div id="bar">
+            <div id="red">
+            </div>
+            <div id="yellow">
+            </div>
+            <div id="green">
+            </div>
+            <p class="filename"><input class="opFilename" type="text" value="Javascript"></p>
+        </div>
+        <div id="screen">
+            <p class="font" id="logger">root@noonepawan:~$</p>
+        </div>
+    </div>
+
+</body>
+<script src="materialColors.js"></script>
+
+<script src="loger.js"></script>
+<script type="text/javascript">
+    $('.inFilename').change(()=>{
+        $('.opFilename').val($('.inFilename').val())
+    })
+
+    function setBg() {
+        const randomColor = Colors[(Math.floor(Math.random() * Colors.length))]//Math.floor(Math.random() * 16777215).toString(16);
+        document.body.style.backgroundColor = randomColor;
+        // color.innerHTML = randomColor;
+    }
+
+    document.getElementById('submit').onclick = function () {
+        eval(document.getElementById('box').value);
+    }
+
+</script>
+
+
+</html>
