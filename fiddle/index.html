@@ -51,6 +51,9 @@
         </div>
         <div id="screen">
             <p class="font" id="logger">root@noonepawan:~$</p>
+            <!-- <p class="font"> -->
+                <!-- <textarea id="boxop" rows="10" cols="30"></textarea> -->
+            <!-- </p> -->
         </div>
     </div>
 
@@ -59,9 +62,9 @@
 
 <script src="loger.js"></script>
 <script type="text/javascript">
-    $('.inFilename').change(()=>{
-        $('.opFilename').val($('.inFilename').val())
-    })
+    // $('.inFilename').change(()=>{
+    //     $('.opFilename').val($('.inFilename').val)
+    // })
 
     function setBg() {
         const randomColor = Colors[(Math.floor(Math.random() * Colors.length))]//Math.floor(Math.random() * 16777215).toString(16);
@@ -70,7 +73,12 @@
     }
 
     document.getElementById('submit').onclick = function () {
-        eval(document.getElementById('box').value);
+        const code = `${document.getElementById('box').value}`;
+        // const resultEl = document.getElementById('result')
+        // const fn = new Function(code)
+        eval(code);
+        // document.getElementById('boxop').value = fn();
+        // eval(document.getElementById('box').value);
     }
 
 </script>
